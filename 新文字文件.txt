@@ -1,0 +1,24 @@
+Q1: explain what rospy.Service()and rospy.ServiceProxy()do respectively?
+A1:
+  rospy.Service():
+     Contains a request message and a response message
+  rospy.ServiceProxy():
+     Create a handle to a ROS service for invoking calls.
+
+
+Q2: What happens if you take out the line ¡§rospy.wait_for_service¡¨, and whyis it happening?
+A2:
+   It depends on the order of launch your roslauch file, If you launch    my_kuka_server.launch first, then that will runs well. However, if you run    the FK_test.launch first, it will die in the process because there is no    the service there, so it will die when using serviceProxy.
+
+
+Q3: What does the ¡§---¡¨is a service file mean?
+A3:
+   To seperate the request and response.
+
+
+
+Q4: In sympy, what does evalf function do?
+A4:
+   Can conver some sympy expression to decimal numbers.
+   Like pi in sympy would be £k or pi,
+   however, when using evalf(), it will becomes 3.14159265358979.
